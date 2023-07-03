@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kelvin Weather</title>
+</head>
+
+<body>
+    <script>
+        // Today's Temperature 
+        const Kelvin = 293
+        // 0 degree celsius = 273K
+        var celsius = Kelvin - 273
+        // c/5 = (f-32)/9
+        var fahrenheit = celsius * (9 / 5) + 32
+        // Random temp in fahrenheit
+        fahrenheit = Math.floor(fahrenheit)
+        console.log(`The temperature is ${fahrenheit} degrees Fahrenheit.`)
+        // Convert to Newton
+        var newton = celsius * (33 / 100)
+        newton = Math.floor(newton)
+        console.log(`The temperature is ${newton} degrees Newton.`)
+
+    </script>
+</body>
+
+</html>
