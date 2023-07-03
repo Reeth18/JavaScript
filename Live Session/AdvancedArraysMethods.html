@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Array Methods</title>
+</head>
+<body>
+    <script>
+        var arr1 = [10, 15, 11, 19, 13, 12]
+        var arr2 = ['a', 'b', 'c', 'd', 'e']
+
+        var arr3 = arr1.map((num) => num*num)
+        console.log(arr3)
+
+        var arr4 = arr2.map((str) => str.toUpperCase())
+        console.log(arr4)
+
+        var arr5 = arr1.map((num) => num*num*num)
+        console.log(arr5)
+        // .reduce(accumulator, currentVal => accumulator + currentVal)
+        var sum = arr1.reduce((sum, current) => sum + current)
+        console.log(sum)
+
+        var product = arr1.reduce((product, current) => product * current)
+        console.log(product)
+
+        var max = arr1.reduce((acc, current) => Math.max(acc, current))
+        console.log(max)
+
+        var min = arr1.reduce((acc, current) => Math.min(acc, current))
+        console.log(min)
+
+        // For each function returns undefined
+        arr1.forEach((num, i, arr) => arr[i] = num * 2)
+        console.log(arr1)
+
+        arr2.forEach((str, i, arr) => console.log(i + ":" + arr[i]))
+
+        arr2.forEach((str) => console.log(str))
+
+        // Some and Every methods
+        console.log(arr1.some((num) => num > 34))
+        console.log(arr1.every((num) => num > 34))
+        
+    </script>
+</body>
+</html>

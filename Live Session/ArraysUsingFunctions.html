@@ -1,0 +1,40 @@
+<!-- Problem 1:
+You are given an array of numbers. Write a function findEvenNumber(numbers) that takes an array of numbers as a parameter and returns the first even number in the array. If no even number is found, the function should return undefined. 
+
+Problem 2:
+You are given an array of strings representing names. Write a function findNameStartingWith(names, letter) that takes an array of names and a letter as parameters. The function should return the first name in the array that starts with the given letter. If no name is found, the function should return null. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays Using Functions</title>
+</head>
+<body>
+    <script>
+        var arr1 = [1, 2, 3, 4, 5]
+        console.log(arr1.find( function(numbers) {
+            return numbers%2 == 0;
+            }))
+
+        function findEvenNumber(arr1){
+            return arr1.find(function(numbers) {
+                return numbers%2 == 0;
+                })
+        }
+        console.log(findEvenNumber(arr1))
+
+        var arr2 = ["Dev", "Raj", "Prem", "Rit"]
+        var ans = arr2.find(function(i){
+            return i.charAt(1) == "r"
+        })
+        console.log(ans)
+
+        var arr1 = [1, 2, 3, 4, 5]
+        console.log(arr1.filter( function(numbers) {
+            return numbers%2 == 0;
+            }))
+            //Filter returns all the possible values in the form of an array while find will find only the first value fulfilling the condition
+    </script>
+</body>
+</html>
