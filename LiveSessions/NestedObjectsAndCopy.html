@@ -1,0 +1,42 @@
+<!-- Copy are of 2 types:-
+1. Shallow Copy is used when we are not changing the original data(Done using spread operator which is {...original_varName})
+2. Deep Copy is used when we are trying to modify both the original and copied data -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nested Objects & Copy</title>
+</head>
+<body>
+    <script>
+        var person = {
+            name : "Rayith",
+            address : {
+                city : "Kolkata",
+                country : "India"
+            }
+        }
+        var shallowCopy = {...person}
+        shallowCopy.name = "Reeth"
+        shallowCopy.address.city = "Batanagar"
+        console.log(person.name)
+        console.log(shallowCopy.name)
+
+        //Merging of Objects
+        var obj1 = {
+            name : "ABC"
+        }
+        var obj2 = {
+            age : 25
+        }
+        var mergeObject = {...obj1,
+        ...obj2}
+        console.log(mergeObject)
+        
+        // Assign Objects
+        var newObj = Object.assign({}, obj1, obj2)
+        console.log(newObj)
+    </script>
+</body>
+</html>
