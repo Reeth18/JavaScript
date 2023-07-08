@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+</head>
+<body>
+    <script>
+        const taskManager = {
+            task : [],
+            // Add Task Method
+            addTask(title,desc) {
+                const newTask = {
+                    title, 
+                    desc, 
+                    completed : false
+                } 
+                this.task.push(newTask)
+            },
+
+            // Task Completed
+            completeTask(index){
+                if (index >= 0){
+                    this.task[index].completed = true;
+                }
+            },
+            displayTask(){
+                console.log("Tasks for the Task Manager are: ")
+                this.task.forEach((ta, index) => {
+                    console.log(`s.no ${index + 1}:-`)
+                    console.log(`title: ${ta.title}`)
+                    console.log(`desccription: ${ta.desc}`)
+                    console.log(`status: ${ta.completed ? 'completed': 'incomplete'}`)
+                })
+            }
+        }
+        taskManager.addTask('morning task', 'Have your breakfast')
+        taskManager.addTask('noon task', 'Have your lunch')
+        taskManager.addTask('evening task', 'Have your tiffin')
+        taskManager.addTask('night task', 'Have your dinner')
+        taskManager.completeTask(1)
+        taskManager.displayTask()
+    </script>
+    
+</body>
+</html>
